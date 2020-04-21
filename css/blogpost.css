@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url("header.css");
+@import url("footer.css");
+body {
+	font-family: Open Sans;
+}
+
+.container {
+	display: grid;
+	grid-template-rows: 80px auto auto;
+	grid-template-areas: 
+	"hd"
+	"bp" 
+	"ft";
+}
+
+.blog-post {
+	grid-area: bp;
+	display: grid;
+	grid-template-columns: 25% 75%;
+	grid-template-areas: 
+	"sd ct";
+	max-width: 1400px;
+	margin: auto;
+	margin-bottom: 20px
+}
+
+.box {
+	border: 1px solid red;
+	background: #F8FA9D;
+}
+
+.header {
+	grid-area: hd;
+}
+
+.footer {
+	grid-area: ft;
+	width: 100%;
+}
+
+.content {
+	grid-area: ct;
+	display: block;
+	padding: 0px 20px;
+}
+
+.sidebar {
+	grid-area: sd;
+	display: grid;
+	grid-template-columns: 50px 1fr;
+	grid-template-areas: "topl topr";
+	margin-top: 20px;
+}
+
+.blogger-avatar {
+	border-radius: 50%;
+	grid-area: topl;
+	width: 40px;
+	height: 40px;
+	display: inline-block;
+	overflow: hidden;
+	border-radius: 50%;
+	margin: 5px 0 0 5px;
+}
+
+.blogger-data {
+	grid-area: topr;
+	display: block;
+}
+
+.blogger-info {
+	display: block;
+	padding: 5px 0 0 5px;
+}
+
+.blogger-bio {
+	grid-area: bio;
+}
+
+.blogger-social {
+	grid-area: social;
+}
+
+.image-fit {
+	width: 40px;
+	height: auto;
+}
+
+.blogger-name {
+	color: #1F2932;
+	font-weight: 600;
+	margin-bottom: 3px
+}
+
+.blogger-tag {
+	color: #96A0AA;
+	font-size: .7em;
+}
+
+.blogger-job {
+	color: #6D7780;
+	font-size: .8em;
+	margin-top: -3px
+}
+
+.bio-header {
+	font-style: italic;
+	margin: 0px;
+	color: #1F2932;
+	font-weight: 800 !important;
+	font-size: 1.3em !important;
+	text-decoration: underline;
+}
+
+.bio-content {
+	padding: 5px 10px 0 5px;
+	margin: 0px;
+	color: #6D7780;
+	font-size: 0.8em;
+}
+
+.blogger-social {
+	display: inline-block;
+	margin-top: 10px;
+}
+
+.icon-box {
+	width: 30px;
+	height: 30px;
+	display: inline-block;
+	overflow: hidden;
+	margin: 5px;
+}
+
+.icon-fit {
+	width: 100%;
+	height: auto;
+}
+
+.post-image {
+	width: 100%;
+	height: 400px;
+	display: inline-block;
+	object-fit: cover;
+}
+
+.post-image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.setion-title {
+	text-decoration: underline;
+	font-style: italic;
+}
+
+
+/*********************Mobile**********************/
+
+@media(max-width: 576px) {
+	.blog-post {
+		margin: 20px;
+		grid-template-columns: 100%;
+		grid-template-areas: 
+		"ct"
+		"sd";
+	}
+	.content {
+		padding: auto;
+	}
+	.post-image {
+		height: 300px;
+	}
+}
+
+
+/*********************Tablet**********************/
+
+@media(min-width: 576px) and (max-width: 720px) {
+	.blog-post {
+		grid-template-columns: 40% 60%;
+	}
+}

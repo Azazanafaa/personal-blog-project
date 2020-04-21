@@ -1,0 +1,15 @@
+.footer {
+	background:#0F2B3D;
+	display: flex;
+	justify-content: center;
+	color: #fff;
+}
+
+.footer-content {
+	max-width: 1300px;
+	padding: 20px 0px;
+	width: 100%;
+	display: inline-block;
+	font-size: .8em;
+	padding-left: 15px;
+}
